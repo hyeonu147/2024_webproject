@@ -53,7 +53,7 @@ http.listen(3001, () => {
 })
 
 // Connect to DB
-mongoose.connect("mongodb://localhost:27017/node", function(err){
+mongoose.connect("mongodb+srv://fielden5602:U1UHP8rhR13zIioq@cluster0.jbwi8.mongodb.net/Cluster0", function(err){
     if(err){
         console.error("mongoDB Connection Error!", err);
     }
