@@ -1,19 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HOME</title>
-    <link rel="stylesheet" type="text/css" href="/public/stylesheets/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+            color: #333;
+        }
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            background: linear-gradient(to right, #80e6ff, #80e6ff);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .home button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .home img {
+            width: 220px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .home img:hover {
+            transform: scale(1.1);
+        }
+        .home-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin: 20px 0;
+        }
+        .navigator {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .btn-gradient {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-gradient.purple {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            box-shadow: 0 4px 8px rgba(106, 17, 203, 0.4);
+        }
+        .btn-gradient.cyan {
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            box-shadow: 0 4px 8px rgba(87, 204, 242, 0.4);
+        }
+        .btn-gradient.green {
+            background: linear-gradient(to right, #56ab2f, #a8e063);
+            box-shadow: 0 4px 8px rgba(86, 171, 47, 0.4);
+        }
+        .btn-gradient:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .navigator {
+                flex-direction: column;
+            }
+            .btn-gradient {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="home">
         <button type="button" id="img" onclick="location.href='/'">
-            <img src="../public/images/rainbow.png" width="200">
+            <img src="public/images/meet.jpg" alt="Logo">
         </button>
+        <div class="home-title">지금 바로 만나</div>
     </div>
     <div class="navigator">
-        <button type="button" class="btn-gradient purple large" id="todo" onclick="location.href='http://localhost:3000/todo'">TODO</button>
-        <button type="button" class="btn-gradient cyan large" id="weather" onclick="location.href='http://localhost:3000/weather'">WEATHER</button>
-        <button type="button" class="btn-gradient green large" id="chat" onclick="location.href='http://localhost:3001/chat'">CHAT</button>
+        <button type="button" class="btn-gradient purple" id="todo" onclick="location.href='http://localhost:3000/todo'">계획세우기</button>
+        <button type="button" class="btn-gradient cyan" id="weather" onclick="location.href='http://localhost:3000/weather'">날씨보기</button>
+        <button type="button" class="btn-gradient green" id="chat" onclick="location.href='http://localhost:3001/chat'">Chat</button>
     </div>
 </body>
 </html>
